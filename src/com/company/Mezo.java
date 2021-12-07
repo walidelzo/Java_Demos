@@ -1,7 +1,8 @@
+
 /*-----------------------------------------------------------------------------
- - Copyright (c) Walid Elzohery ٧‏/١٢‏/٢٠٢١ ٣:٤٥ م.                           -
+ - Copyright (c) Walid Elzohery 12/7/21, 3:47 PM.                             -
  - All right Reserved.                                                        -
  -----------------------------------------------------------------------------*/
 
-public class Mezo {
+package com.company;public class Mezo {
 }
