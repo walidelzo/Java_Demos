@@ -8,5 +8,6 @@ package com.company.threads;
 public class Geogeo {
     public static void main(String[] args) {
         System.out.println("ge");
+        System.out.println("hello git ");
     }
 }
