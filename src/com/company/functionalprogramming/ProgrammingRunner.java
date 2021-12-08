@@ -6,33 +6,27 @@
 
 package com.company.functionalprogramming;
 
-import java.util.ArrayList;
+
 import java.util.List;
-import java.util.stream.Stream;
+
 
 public class ProgrammingRunner {
     public static void main(String[] args) {
         List<String> lists = List.of("apple", "banana", "cat", "rat", "car","bar");
-        // printlist(lists);
         TestFb testFb = new TestFb(lists);
         System.out.println("____________print without functioning programming__________________");
         testFb.printList();
         System.out.println("___________print with function programming___________________");
         testFb.printListFB();
         System.out.println("___________filter without function programming___________________");
-        testFb.printListFilter("ar");
+        testFb.printListFilter();
         System.out.println("___________filter with function programming___________________");
         testFb.printWithFilter();
 
     }
 }
 
-class TestFb {
-    private List<String> list;
-
-    TestFb(List<String> list) {
-        this.list = list;
-    }
+record TestFb(List<String> list) {
 
     void printList() {
         for (String string : list) {
@@ -40,19 +34,20 @@ class TestFb {
         }
     }
 
-    void printListFilter(String fileterCerteria) {
+    void printListFilter() {
         for (String string : list) {
-            if(string.endsWith("ar"))
-            System.out.println(string);
+            if (string.endsWith("ar")) {
+                System.out.println(string);
+            }
         }
     }
 
     void printListFB() {
-        list.stream().forEach(element -> System.out.println(element));
+        list.forEach(System.out::println);
     }
 
     void printWithFilter() {
-        list.stream().filter(e -> e.endsWith("at")).forEach(e -> System.out.println(e));
+        list.stream().filter(e -> e.endsWith("at")).forEach(System.out::println);
     }
 }
 
